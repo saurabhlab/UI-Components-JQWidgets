@@ -1,0 +1,54 @@
+<div class="row">
+  <div class="col-lg-3">
+      <h3>  Rating Example</h3>
+<div id='jqxWidget' style="font-size: 30px; font-family: Verdana;">
+  <jqxRating #jqxRating [precision]="0.5" [count]="10" (onChange)="change($event)" [width]="500" [height]="35"></jqxRating>
+  <div style='margin-top: 20px;'>
+    <div style='float: left;'>Rating: </div>
+    <div style='float: left;' #rate></div>
+  </div>
+</div>
+
+  </div>
+<div class="col-lg-6">
+    <h3>Ribbon Example</h3>
+  <jqxRibbon [width]='500' [height]='height'>
+    <ul>
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li>Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+    </ul>
+    <div>
+      <div><img src="{{'/assets/Images/nature 4.jpeg'}}" alt="h" height="400px" width="500px" >
+ </div>
+      <div><img src="{{'/assets/Images/nature 5.jpeg'}}" alt="h" height="400px" width="500px" ></div>
+      <div><img src="{{'/assets/Images/nature 3.jpeg'}}" alt="h" height="400px" width="500px" ></div>
+      <div><img src="{{'/assets/Images/nature 2.jpg'}}" alt="h" height="400px" width="500px" ></div>
+      <div><img src="{{'/assets/Images/mario.jpg'}}" alt="h" height="400px" width="500px" ></div>
+      <div><img src="{{'/assets/Images/nature1.jpg'}}" alt="h" height="400px" width="500px" ></div>
+    </div>
+  </jqxRibbon>
+</div>
+<div class="col-lg-3">
+  <h3>Loader Example</h3>
+<jqxLoader
+  
+            [width]="100" 
+            [height]="100"
+            [imagePosition]="'center'"
+            [autoOpen]="true"
+            [theme]="'energyblue'">
+        </jqxLoader>
+</div>
+
+</div>
+
+
+<div>
+  
+
+
+</div>

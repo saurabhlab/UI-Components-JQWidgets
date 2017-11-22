@@ -1,0 +1,73 @@
+<div class="row">
+  <div class="col-lg-3">
+
+    <h3>Default Upload File</h3>
+    <jqxFileUpload [width]="300" [uploadUrl]="'imageUpload.php'" [fileInputName]="'fileToUpload'" [cancelTemplate]="'danger'"
+      [browseTemplate]="'success'" [uploadTemplate]="'primary'">
+    </jqxFileUpload>
+    <br>
+    <!--(change)="onSelect($event)"-->
+    <!--[uploadUrl]="'http://localhost:58836/api/Professional/UploadFileApi'"-->
+    <!--[uploadTemplate]="'primary'"-->
+    <!--(onUploadEnd)="onUploadEnd($event)" -->
+    <h3>Selected File Rendering</h3>
+    <!--<jqxFileUpload     
+    [width]="300" [uploadUrl]="'http://localhost:58836/api/Professional/UploadFileApi'" 
+  
+     [multipleFilesUpload]="false"  [fileInputName]="'fileToUpload'" [renderFiles]="renderFiles"
+    [cancelTemplate]="'danger'" [browseTemplate]="'info'" [uploadTemplate]="'primary'">
+</jqxFileUpload>-->
+
+
+    <jqxFileUpload [width]="300" [uploadUrl]="'http://localhost:58836/api/Professional/UploadFileApi'" [fileInputName]="'fileToUpload'"
+      [renderFiles]="renderFiles">
+    </jqxFileUpload>
+    <!--<img width="100" height="100" ng-src="imgsrc" alt=""  class="fileupload_img" >-->
+
+  </div>
+  <div class="col-lg-3">
+
+    <h3>Notification</h3>
+    <!--Notifications-->
+    <jqxNotification #msgNotification [blink]="true" [width]="250" [position]="'top-right'" [opacity]="0.9" [autoOpen]="false"
+      [autoClose]="true" [animationOpenDelay]="800" [autoCloseDelay]="6000" [template]="'info'">
+      <div>
+        Welcome to our website.
+      </div>
+    </jqxNotification>
+    <jqxButton [width]="230" [height]="30" (onClick)="onClickOpenMessageNotification()">
+      Info notification
+    </jqxButton>
+    <br /><br />
+
+    <jqxNotification #timeNotification [appendContainer]="'#container'" [width]="300" [position]="'top-right'" [opacity]="0.9"
+      [autoOpen]="false" [autoClose]="true" [animationOpenDelay]="800" [autoCloseDelay]="3000" [template]="'time'">
+      <div>Current time: <span id="currentTime" style="font-weight: bold;"></span>.</div>
+    </jqxNotification>
+    <jqxButton [width]="230" [height]="30" (onClick)="onClickOpenTimeNotification()">
+      Open a current time notification
+    </jqxButton>
+    <br /><br />
+
+
+    <jqxNotification #successNotification [width]="500" [position]="'top-right'" [opacity]="0.9" [autoOpen]="false" [autoClose]="true"
+      [animationOpenDelay]="800" [autoCloseDelay]="3000" [template]="'success'">
+      <div>
+        Successful, Welcome to our website.
+      </div>
+    </jqxNotification>
+    <jqxButton [width]="230" [height]="30" (onClick)="onClickOpenSuccessNotification()">
+      Success notification
+    </jqxButton>
+    <br /><br />
+
+
+  </div>
+  <div class="col-lg-3">
+    <h3>Notification in Container</h3>
+
+    <div id="container" style="width: 300px; height: 400px; margin-top: 15px; background-color: #F2F2F2;
+        border: 1px dashed #AAAAAA; overflow: auto;">
+    </div>
+  </div>
+</div>

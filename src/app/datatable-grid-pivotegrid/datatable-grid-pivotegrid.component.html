@@ -1,0 +1,90 @@
+<div class="row">
+    <div class=" col-lg-6">
+        <h3>DataTabel </h3>
+        <jqxDataTable #dataTabel [source]="dataAdapter" [sortable]="true" [pageable]="true" [columns]="columns" (onSort)="onSortMethod()"
+            [filterable]="true" [filterMode]="'advanced'" [filterHeight]="35"  #dataTable>
+        </jqxDataTable>
+        <!--use for print === [exportSettings]="{ fileName: null }"-->
+            <div style="margin-top: 20px">
+            <div style="float: left">
+                <jqxButton (onClick)="excelBtnOnClickDatatable()">Export to <h5 style="color:red">Excel</h5></jqxButton>
+            </div>
+
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="xmlBtnOnClickDatatable()">Export to <h5 style="color:red">XML</h5></jqxButton>
+            </div>
+
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="csvBtnOnClickDatatable()">Export to <h5 style="color:red">CSV</h5></jqxButton>
+
+
+            </div>
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="tsvBtnOnClickDatatable()">Export to <h5 style="color:red">TSV</h5></jqxButton>
+            </div>
+
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="htmlBtnOnClickDatatable()">Export to <h5 style="color:red">HTML</h5></jqxButton>
+            </div>
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="jsonBtnOnClickDatatable()">Export to <h5 style="color:red">JSON</h5></jqxButton>
+            </div>
+
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="pdfBtnOnClickDatatable()">Export to<h5 style="color:red"> PDF</h5></jqxButton>
+            </div>
+
+
+            <!--<div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="btnForPrint()"><h5 style="color:blue"> Print</h5></jqxButton>
+            </div>-->
+
+            
+        </div>
+    </div>
+    <div class="col-lg-6">
+        <h3>Grid</h3>
+        <jqxGrid [filterable]="true" [theme]="'energyblue'" [width]='800' [source]='dataAdapter' [pageable]='true' [autoheight]='true'
+            [editable]='true' [sortable]='true' [columns]='columns' [columngroups]='columngroups' [selectionmode]='"multiplecellsadvanced"'
+            #gridReference>
+        </jqxGrid>
+        <div style="margin-top: 20px">
+            <div style="float: left">
+                <jqxButton (onClick)="excelBtnOnClick()">Export to <h5>Excel</h5></jqxButton>
+            </div>
+
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="xmlBtnOnClick()">Export to <h5>XML</h5></jqxButton>
+            </div>
+
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="csvBtnOnClick()">Export to <h5>CSV</h5></jqxButton>
+
+
+            </div>
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="tsvBtnOnClick()">Export to <h5>TSV</h5></jqxButton>
+            </div>
+
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="htmlBtnOnClick()">Export to <h5>HTML</h5></jqxButton>
+            </div>
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="jsonBtnOnClick()">Export to <h5>JSON</h5></jqxButton>
+            </div>
+
+            <div style="float: left; margin-left: 10px">
+                <jqxButton (onClick)="pdfBtnOnClick()">Export to <h5>PDF</h5></jqxButton>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="offset-lg-3" style="padding-top: 50px">
+    <h3>pivot Table</h3>
+    <jqxPivotGrid #pivotGridReference [width]="800" [height]="400" [source]="pivotDataSource" [treeStyleRows]="true" [autoResize]="false"
+        [multipleSelectionEnabled]="true">
+    </jqxPivotGrid>
+</div>

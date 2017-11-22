@@ -1,0 +1,30 @@
+
+<div class="row">
+  <div class="col-lg-6">
+    <jqxChart #myDountChart
+    [animationDuration]="1500"
+    [toolTipHideDelay]="500"
+    
+    [width]="850" [height]="500"
+        [title]="'Dount Chart Example'"
+    [description]="'Dount chart'"  [legendLayout]="legendLayout"
+    [showLegend]="ture" [enableAnimations]="true" [padding]="padding"
+    [titlePadding]="titlePadding" [source]="data" [showBorderLine]="true"
+    [seriesGroups]="dountSeriesGroups" [colorScheme]="'scheme03'">
+</jqxChart> </div>
+
+ <div class="col-lg-6">
+   
+
+<jqxChart #myPieChart2
+    [width]="850" [height]="500"
+    [title]="'Pie Chart Example'"
+    [description]="'pie chart'"
+    [showLegend]="true" [legendLayout]="legendLayout" [enableAnimations]="true" [padding]="padding"
+    [titlePadding]="titlePadding" [source]="data" [showBorderLine]="true"
+    [seriesGroups]="pieSeriesGroups" [colorScheme]="'scheme02'"> 
+</jqxChart>
+ </div>
+</div>
+
+

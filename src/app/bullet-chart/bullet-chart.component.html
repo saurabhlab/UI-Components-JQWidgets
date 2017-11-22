@@ -1,0 +1,32 @@
+
+
+<div class="row">
+  <div class="col-lg-6">
+<p> Default bullet-chart </p>
+
+    <jqxBulletChart
+            [width]="500" [height]="80" [barSize]="'40%'" [labelsFormat]="'c'"
+            [showTooltip]="true" [title]="title" [description]="description" 
+            [ranges]="ranges" [pointer]="pointer" [target]="target" [ticks]="ticks"
+            #bulletChartReference>
+         </jqxBulletChart> <br>
+
+         <p>
+ custom bullet-chart 
+</p>
+<jqxBulletChart [width]="500" [height]="100" [barSize]="'60%'" [labelsFormat]="'c'"
+                [showTooltip]="true" [title]="title" [description]="description"
+                [ranges]="ranges" [pointer]="pointer" [target]="target" [ticks]="ticks">
+</jqxBulletChart>
+
+  </div>
+  <div  class="col-lg-6">
+     <jqxBarGauge 
+	 [width]="600" [height]="600" [colorScheme]="'scheme02'"
+	 [max]="250" [values]="values">
+</jqxBarGauge>
+  </div>
+</div>
+
+
+

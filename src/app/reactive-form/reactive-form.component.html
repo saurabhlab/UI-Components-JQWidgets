@@ -1,0 +1,54 @@
+
+<div class="container" >
+        <div class="form-horizontal col-md-5 col-md-offset-5" style="border: 1px solid black; padding: 10px ">
+ 
+            <div style="text-align: center">
+                <h2>User Registration Form</h2>
+                <br>
+            </div>
+ 
+            <form [formGroup]="myForm" novalidate>
+ 
+                <div class="form-group">
+                    <label class="center-block">
+                        Email: 
+                        <jqxInput class="form-control" name="email" formControlName="email"></jqxInput>
+                     </label>
+                    <div *ngIf="errMsgs.email.length" class="alert alert-danger">
+                        <ul>
+                            <li *ngFor="let error of errMsgs.email">
+                                {{error}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+ 
+                <div class="form-group">
+                    <label class="center-block">
+                        Username:
+ 
+                        <jqxInput class="form-control" name="uname" formControlName="username"></jqxInput>
+ 
+                    </label>
+                    <div *ngIf="errMsgs.username.length " class="alert alert-danger">
+                        <ul>
+                            <li *ngFor="let error of errMsgs.username">
+                                {{error}}
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+ 
+                <div class="form-group">
+                    <jqxCheckBox formControlName="terms" [boxSize]="'16px'" [theme]="'metro'">
+                        By checking this box, I agree to Terms & Conditions.
+                    </jqxCheckBox>
+                </div>
+ 
+                <jqxButton class="btn btn-success" [disabled]="!myForm.valid" (onClick)="register()">Register</jqxButton>
+                <jqxButton style="margin-left: 9px" class="btn btn-default" (onClick)="clearForm()"> Clear Form</jqxButton>
+          </form>
+ 
+        </div>
+    </div>
+ 
