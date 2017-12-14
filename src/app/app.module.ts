@@ -42,6 +42,14 @@ import { UploadfileNotificationComponent } from './uploadfile-notification/uploa
 import { jqxFileUploadComponent } from '../../node_modules/jqwidgets-framework/jqwidgets-ts/angular_jqxfileupload';
 //import { FileUploadModule } from '../../modules/fileupload.module';
 import { jqxNotificationComponent } from '../../node_modules/jqwidgets-framework/jqwidgets-ts/angular_jqxnotification';
+import { FormsUtiliteComponent } from './forms-utilite/forms-utilite.component';
+//import { FormsUtilitesComponent } from "./forms-utilites/forms-utilites.component";
+////import { FormsUtilitesComponent } from './forms-utilites/forms-utilites.component';
+
+
+
+import { jqxDateTimeInputComponent } from '../../node_modules/jqwidgets-framework/jqwidgets-ts/angular_jqxdatetimeinput';
+
 //import { NotificationModule } from '../../modules/notification.module';
 const routes: Routes = [
   { path: 'ReactiveForm', component: ReactiveFormComponent },
@@ -55,7 +63,9 @@ const routes: Routes = [
       { path: 'TaggingTooltipSlider', component: TaggingTooltipSliderComponent },
        { path: 'DatatableGridPivotegrid', component: DatatableGridPivotegridComponent },
         { path: 'Editor', component: EditorComponent },
-        { path: 'UploadfileNotification', component: UploadfileNotificationComponent }
+        { path: 'UploadfileNotification', component: UploadfileNotificationComponent },
+        { path: 'FormsUtilites', component: FormsUtiliteComponent }
+
 
 
 ];
@@ -96,7 +106,9 @@ const routes: Routes = [
      jqxWindowComponent,
      UploadfileNotificationComponent,
      jqxFileUploadComponent,
-     jqxNotificationComponent
+     jqxNotificationComponent,
+     FormsUtiliteComponent,
+    jqxDateTimeInputComponent
 
   ],
   imports: [
